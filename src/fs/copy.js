@@ -29,7 +29,7 @@ const copy = async () => {
         } else {
             console.error('An unexpected error occurred:', error);
         }
-        throw new FileOperationError('FS operation failed');
+        throw new FileOperationError('FS operation failed', { cause: error });
     }
 };
 

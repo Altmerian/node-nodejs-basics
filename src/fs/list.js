@@ -16,7 +16,7 @@ const list = async () => {
         } else {
             console.error(`Failed to read directory: ${err.message}`);
         }
-        throw new FileOperationError('FS operation failed');
+        throw new FileOperationError('FS operation failed', { cause: err });
     }
 };
 

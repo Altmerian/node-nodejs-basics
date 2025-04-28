@@ -50,7 +50,7 @@ const rename = async () => {
         if (!(error instanceof FileOperationError)) {
             console.error('An unexpected error occurred during the rename operation:', error);
         }
-        throw new FileOperationError('FS operation failed');
+        throw new Error('FS operation failed', { cause: error });
     }
 };
 

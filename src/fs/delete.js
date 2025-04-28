@@ -16,7 +16,7 @@ const remove = async () => {
         } else {
             console.error(`Unlink operation failed: ${err.message}`);
         }
-        throw new FileOperationError('FS operation failed');
+        throw new FileOperationError('FS operation failed', { cause: err });
     }
 };
 
